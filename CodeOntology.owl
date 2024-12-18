@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ex "http://www.example.org/its#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/FarsatSadeq/ontologies/2024/11/AlgebraEquation-ITS#"
+     xml:base="http://www.semanticweb.org/FarsatSadeq/ontologies/2024/11/AlgebraEquation-ITS"
+     xmlns:ex="http://www.example.org/its#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/FarsatSadeq/ontologies/2024/11/AlgebraEquation-ITS"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/its#hasCoefficient -->
+
+    <owl:AnnotationProperty rdf:about="&ex;hasCoefficient"/>
+    
+
+
+    <!-- http://www.example.org/its#hasConstant -->
+
+    <owl:AnnotationProperty rdf:about="&ex;hasConstant"/>
+    
+
+
+    <!-- http://www.example.org/its#hasVariable -->
+
+    <owl:AnnotationProperty rdf:about="&ex;hasVariable"/>
+    
+
+
+    <!-- http://www.example.org/its#lessonContainsHint -->
+
+    <owl:AnnotationProperty rdf:about="&ex;lessonContainsHint"/>
+    
+
+
+    <!-- http://www.example.org/its#lessonIncludesEquation -->
+
+    <owl:AnnotationProperty rdf:about="&ex;lessonIncludesEquation"/>
+    
+
+
+    <!-- http://www.example.org/its#studentHasProgress -->
+
+    <owl:AnnotationProperty rdf:about="&ex;studentHasProgress"/>
+    
+
+
+    <!-- http://www.example.org/its#studentReceivesFeedback -->
+
+    <owl:AnnotationProperty rdf:about="&ex;studentReceivesFeedback"/>
+    
+
+
+    <!-- http://www.example.org/its#tutorProvidesHint -->
+
+    <owl:AnnotationProperty rdf:about="&ex;tutorProvidesHint"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- ex:Coefficient -->
+
+    <owl:Class rdf:about="ex:Coefficient"/>
+    
+
+
+    <!-- ex:Constant -->
+
+    <owl:Class rdf:about="ex:Constant"/>
+    
+
+
+    <!-- ex:Feedback -->
+
+    <owl:Class rdf:about="ex:Feedback"/>
+    
+
+
+    <!-- ex:Hint -->
+
+    <owl:Class rdf:about="ex:Hint"/>
+    
+
+
+    <!-- ex:Lesson -->
+
+    <owl:Class rdf:about="ex:Lesson"/>
+    
+
+
+    <!-- ex:LinearEquation -->
+
+    <owl:Class rdf:about="ex:LinearEquation"/>
+    
+
+
+    <!-- ex:Progress -->
+
+    <owl:Class rdf:about="ex:Progress"/>
+    
+
+
+    <!-- ex:Student -->
+
+    <owl:Class rdf:about="ex:Student"/>
+    
+
+
+    <!-- ex:Variable -->
+
+    <owl:Class rdf:about="ex:Variable"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Class -->
+
+    <owl:Class rdf:about="&rdf;Class"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- ex:2 -->
+
+    <owl:NamedIndividual rdf:about="ex:2">
+        <rdf:type rdf:resource="ex:Coefficient"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:4 -->
+
+    <owl:NamedIndividual rdf:about="ex:4">
+        <rdf:type rdf:resource="ex:Constant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Coefficient -->
+
+    <owl:NamedIndividual rdf:about="ex:Coefficient">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Constant -->
+
+    <owl:NamedIndividual rdf:about="ex:Constant">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Equation1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Equation1">
+        <rdf:type rdf:resource="ex:LinearEquation"/>
+        <ex:hasCoefficient rdf:resource="ex:2"/>
+        <ex:hasConstant rdf:resource="ex:4"/>
+        <ex:hasVariable rdf:resource="ex:x"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Error -->
+
+    <owl:NamedIndividual rdf:about="ex:Error">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Feedback -->
+
+    <owl:NamedIndividual rdf:about="ex:Feedback">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Feedback1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Feedback1">
+        <rdf:type rdf:resource="ex:Feedback"/>
+        <ex:studentReceivesFeedback rdf:resource="ex:Student1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Hint -->
+
+    <owl:NamedIndividual rdf:about="ex:Hint">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Hint1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Hint1">
+        <rdf:type rdf:resource="ex:Hint"/>
+        <ex:tutorProvidesHint rdf:resource="ex:Tutor1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Lesson -->
+
+    <owl:NamedIndividual rdf:about="ex:Lesson">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Lesson1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Lesson1">
+        <rdf:type rdf:resource="ex:Lesson"/>
+        <ex:lessonIncludesEquation rdf:resource="ex:Equation1"/>
+        <ex:lessonContainsHint rdf:resource="ex:Hint1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:LinearEquation -->
+
+    <owl:NamedIndividual rdf:about="ex:LinearEquation">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Operation -->
+
+    <owl:NamedIndividual rdf:about="ex:Operation">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Progress -->
+
+    <owl:NamedIndividual rdf:about="ex:Progress">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Progress1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Progress1">
+        <rdf:type rdf:resource="ex:Progress"/>
+        <ex:studentHasProgress rdf:resource="ex:Student1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Solution -->
+
+    <owl:NamedIndividual rdf:about="ex:Solution">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Student -->
+
+    <owl:NamedIndividual rdf:about="ex:Student">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Student1 -->
+
+    <owl:NamedIndividual rdf:about="ex:Student1">
+        <rdf:type rdf:resource="ex:Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Tutor -->
+
+    <owl:NamedIndividual rdf:about="ex:Tutor">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:Variable -->
+
+    <owl:NamedIndividual rdf:about="ex:Variable">
+        <rdf:type rdf:resource="&rdf;Class"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- ex:x -->
+
+    <owl:NamedIndividual rdf:about="ex:x">
+        <rdf:type rdf:resource="ex:Variable"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
